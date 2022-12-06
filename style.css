@@ -165,7 +165,8 @@ body {
   display: block;
   position: relative;
 }
-  img {
+  img,
+  video {
     display: block;
     position: relative;
     width: 100%;
