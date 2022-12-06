@@ -122,7 +122,7 @@ body {
   }
 
 .l-section {
-  max-width: 1000px;
+  max-width: 768px;
   padding-bottom: 120px;
 }
 
@@ -147,18 +147,19 @@ body {
 
 .l-caption {
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5em;
+  line-height: 1.6em;
   margin: 40px auto 0;
   max-width: 800px;
   width: calc(100% - 160px );
 }
   .l-caption strong {
+    font-family: 'Circular-Bold';
     font-size: 13px;
     text-transform: uppercase;
   }
   .l-caption p {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 15px;
+    font-size: 14px;
   }
 
 .l-item {
