@@ -80,7 +80,7 @@ body {
   background-color: #141414;
 }
 .l-title,
-.l-section {
+.l-section__content {
   display: block;
   margin: auto;
   width: calc(100% - 160px);
@@ -121,10 +121,9 @@ body {
     max-width: 80%;
   }
 
-.l-section {
-  max-width: 768px;
-  padding-bottom: 120px;
-}
+.l-section { padding-bottom: 120px }
+.l-section__content { max-width: 768px }
+/*.l-section--wide .l-section__content { max-width: 1000px }*/
 
 
 .l-grid__container {
@@ -149,7 +148,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6em;
   margin: 40px auto 0;
-  max-width: 800px;
+  max-width: 600px;
   width: calc(100% - 160px );
 }
   .l-caption strong {
@@ -191,9 +190,35 @@ body {
 
 
 @media only screen and (max-width: 1000px) {
-  .l-title, .l-section { width: calc(100% - ($gutter * 3) ) }
-  .l-caption { width: calc(100% - 40px ) }
+  .l-title {
+    align-items: center;
+    display: flex;
+    min-height: 90%;
+    padding: 100px 0;
+    width: 60%;
+  }
+  .l-title h1 { width: 100% }
+  .l-section__content { width: calc(100% - 60px ) }
+  .l-caption {
+    margin-top: 20px;
+    width: calc(100% - 80px );
+  }
   .l-grid__container--split > .l-item { flex: 0 0 100% !important }
+
+  .l-grid__container--2 .l-grid__container,
+  .l-grid__container--3 .l-grid__container,
+  .l-grid__container--4 .l-grid__container,
+  .l-grid__container--5 .l-grid__container,
+  .l-grid__container--6 .l-grid__container { flex: 0 0 100% }
+
+  .l-grid__container {
+    gap: 10px;
+  }
+
+  .l-mt,
+  .l-grid + .l-grid,
+  .l-item + .l-grid,
+  .l-grid + .l-item { margin-top: 10px }
 }
 
 
